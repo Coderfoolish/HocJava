@@ -8,7 +8,7 @@ package inheritance;
 import java.util.Scanner;
 
 /**
- * @author admin
+ * @author DinoTanDao vip pro
  */
 public class ConNguoi {
     protected String hoten;

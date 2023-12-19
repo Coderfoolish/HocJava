@@ -29,6 +29,7 @@ public class CatClass extends baitap4 {
             System.out.println("Menu:");
             System.out.println("1. Nhập động vật");
             System.out.println("2. Xuất động vật");
+            System.out.println("3. Phuong thuc overise & overload");
             System.out.println("0. Thoát");
             System.out.print("Chọn tùy chọn (0 -> 2): ");
             choice = sc.nextInt();
@@ -39,6 +40,11 @@ public class CatClass extends baitap4 {
                     break;
                 case 2:
                     cl.xuatcat();
+                    break;
+                case 3:
+                    cl.Eat();
+                   // cl.Eat(2,3);
+                    cl.Keu();
                     break;
                 case 0:
                     System.out.println("Thoát khỏi chương trình.");
@@ -62,5 +68,13 @@ public class CatClass extends baitap4 {
     public void xuatcat() {
         super.xuat();
         System.out.printf("%-20s%-20s", maulong, tinhcach);
+    }
+
+    public void Eat(int a , int b ) {
+        System.out.println("An " +a + "con ca va An"  + b +"do an hop");
+    }
+    @Override
+    public void Keu() {
+        super.Keu();
     }
 }

@@ -8,7 +8,6 @@ package dungchung;
 import java.util.Scanner;
 
 /**
- *
  * @author nguyen thanh sang
  */
 public class DiaChi {
@@ -16,29 +15,29 @@ public class DiaChi {
     private String duong;
     private String quan;
     private String thanhpho;
-    Scanner sc=new Scanner(System.in);
-    public DiaChi()
-    {
-        sonha=null;
-        duong=null;
-        quan=null;
+    Scanner sc = new Scanner(System.in);
+
+    public DiaChi() {
+        sonha = null;
+        duong = null;
+        quan = null;
     }
-    public DiaChi(String sonha, String duong, String quan, String thanhpho)
-    {
-        this.sonha=sonha;
-        this.duong=duong;
-        this.quan=quan;
-        this.thanhpho=thanhpho;
-                
+
+    public DiaChi(String sonha, String duong, String quan, String thanhpho) {
+        this.sonha = sonha;
+        this.duong = duong;
+        this.quan = quan;
+        this.thanhpho = thanhpho;
+
     }
-    public DiaChi(DiaChi dc)
-    {
-        sonha=dc.sonha;
-        duong=dc.duong;
-        quan=dc.quan;
-        thanhpho=dc.thanhpho;
+
+    public DiaChi(DiaChi dc) {
+        sonha = dc.sonha;
+        duong = dc.duong;
+        quan = dc.quan;
+        thanhpho = dc.thanhpho;
     }
-    
+
     public String getSonha() {
         return sonha;
     }
@@ -70,32 +69,32 @@ public class DiaChi {
     public void setThanhpho(String thanhpho) {
         this.thanhpho = thanhpho;
     }
-    public void nhapdiachi()
-    {
+
+    public void nhapdiachi() {
         System.out.println("Nhap sonha:");
-        sonha=sc.nextLine();
+        sonha = sc.nextLine();
         System.out.println("Nhap duong:");
-        duong=sc.nextLine();
+        duong = sc.nextLine();
         System.out.println("Nhap quan:");
-        quan=sc.nextLine();
+        quan = sc.nextLine();
         System.out.println("Nhap Thanh pho:");
-        thanhpho=sc.nextLine();
-        
+        thanhpho = sc.nextLine();
+
     }
-    public void nhapdiachi(String sonha, String duong, String quan, String thanhpho)
-    {
-        this.sonha=sonha;
-        this.duong=duong;
-        this.quan=quan;
-        this.thanhpho=thanhpho;
+
+    public void nhapdiachi(String sonha, String duong, String quan, String thanhpho) {
+        this.sonha = sonha;
+        this.duong = duong;
+        this.quan = quan;
+        this.thanhpho = thanhpho;
     }
-    public String toString()
-    {
-        return sonha+ duong + quan +thanhpho;
+
+    public String toString() {
+        return sonha + duong + quan + thanhpho;
     }
-    public void xuatdiachi()
-    {
+
+    public void xuatdiachi() {
         System.out.println(sonha + duong + quan + thanhpho);
     }
-    
+
 }

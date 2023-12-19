@@ -3,7 +3,6 @@ package Point_vip;
 public class Point {
     protected int x ;
     protected int y ;
-
     public Point()
     {
         this.x = 0 ;

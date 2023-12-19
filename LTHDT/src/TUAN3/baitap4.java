@@ -72,5 +72,12 @@ public class baitap4 {
         System.out.println("+-----------------------------------------------------------------------+");
         System.out.printf("%-10s%-10s%-10s%-10s", bo , ho , ten , tuoi);
     }
-
+    public void Eat()
+    {
+        System.out.println("Phuong thuc an cua dv ");
+    }
+    public void Keu()
+    {
+        System.out.println("Phuong thuc keu cua dv ");
+    }
 }
