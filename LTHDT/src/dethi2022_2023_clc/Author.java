@@ -16,5 +16,14 @@ public class Author {
         this.email = emai ;
         this.gender = gender ;
     }
-
+    public String getName(){
+        return name ;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public Character getGender()
+    {
+        return gender ;
+    }
 }

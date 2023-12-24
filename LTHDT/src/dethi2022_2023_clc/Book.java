@@ -1,7 +1,5 @@
 package dethi2022_2023_clc;
 
-import java.util.Arrays;
-
 public class Book {
     private String name ;
     Author[] authors ;
@@ -46,23 +44,33 @@ public class Book {
         this.qty = qty;
     }
 
-    @Override
     public String toString() {
-        return "Book{" +
-                "name='" + name + '\'' +
-                ", authors=" + Arrays.toString(authors) +
-                ", price=" + price +
-                ", qty=" + qty +
-                '}';
-    }
-
-    public String getAuthorNames()
-    {
-        String[] temp = {"authorName1" , "authorName2"};
-        for (String s : temp){
-            System.out.println(s);
+        String authorsString = "";
+        for (int i = 0; i < authors.length; i++) {
+            authorsString.concat("[name:" + authors[i].getName() + ",email=" + authors[i].getEmail() + ",gender=" + authors[i].getGender() + "]");
+            if (i < authors.length - 1) {
+                authorsString.concat(",");
+            }
         }
-        return null ;
+        return "Book[name=" + name + ",authors={Author" + authorsString + "},price=" + price + ",qty=" + qty + "]";
+    }
+//    public String getAuthorNames()
+//    {
+//        String[] temp = {"authorName1" , "authorName2"};
+//        for (String s : temp){
+//            System.out.println(s);
+//        }
+//        return null ;
+//    }
+    public String getAuthorNames() {
+        String authorNames = "";
+        for (int i = 0; i < authors.length; i++) {
+            authorNames.concat(authors[i].getName());
+            if (i < authors.length - 1) {
+                authorNames.concat(",");
+            }
+        }
+        return authorNames;
     }
     public Book dauSachLonNhat(Book[] list)
     {
