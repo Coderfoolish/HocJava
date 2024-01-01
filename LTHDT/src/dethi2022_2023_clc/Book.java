@@ -45,37 +45,28 @@ public class Book {
     }
 
     public String toString() {
-        String authorsString = "";
-        for (int i = 0; i < authors.length; i++) {
-            authorsString.concat("[name:" + authors[i].getName() + ",email=" + authors[i].getEmail() + ",gender=" + authors[i].getGender() + "]");
-            if (i < authors.length - 1) {
-                authorsString.concat(",");
-            }
+//        String kq = "";
+        String authors = "authors={";
+        for (Author a: this.authors){
+            authors += a.toString();
+            authors += ",";
         }
-        return "Book[name=" + name + ",authors={Author" + authorsString + "},price=" + price + ",qty=" + qty + "]";
+        return "Book[ name=" + this.name +
+                "," + authors + ", ptice=" +  this.price
+                +     ", qty= " + this.qty + "]";
     }
-//    public String getAuthorNames()
-//    {
-//        String[] temp = {"authorName1" , "authorName2"};
-//        for (String s : temp){
-//            System.out.println(s);
-//        }
-//        return null ;
-//    }
-    public String getAuthorNames() {
-        String authorNames = "";
-        for (int i = 0; i < authors.length; i++) {
-            authorNames.concat(authors[i].getName());
-            if (i < authors.length - 1) {
-                authorNames.concat(",");
-            }
+    public String getAuthorNames(){
+        StringBuilder kqua = new StringBuilder();
+        for(Author a: this.authors){
+            kqua.append(a.getName());
+            kqua.append(",");
         }
-        return authorNames;
+        return kqua.toString();
     }
     public Book dauSachLonNhat(Book[] list)
     {
         if (list.length == 0 ) {
-            return  null ;
+            return null ;
         }
         Book max = list[0] ;
         for (Book q: list){

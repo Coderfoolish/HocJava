@@ -24,20 +24,22 @@ public class DSXe{
     }
     public void themXe()
     {
-        System.out.println("Them xe bus (1) hay xe tai (2)? ");
-        int choice = sc.nextInt();
+        System.out.println("(1) them xeTai , (2) them xeBus , moi ban chon: ");
+        int choice = sc.nextInt() ;
         Xe xe = null ;
-        if (choice ==1 )
-            xe = new XeBus() ;
+        if(choice == 1)
+            xe = new XeTai() ;
         else
-            xe  = new XeTai() ;
+            xe = new XeBus() ;
         xe.nhap();
-        Xe[] mangTemp = new Xe[soLuong +1 ] ;
-        for ( int i =0 ; i < soLuong ;i++)
+        Xe[] temp= new Xe[soLuong +1 ] ;
+        for ( int i = 0 ; i < soLuong ; i ++ )
         {
-            mangTemp[i] = mangXe[i] ;
+            temp[i] = mangXe[i] ;
         }
-        mangTemp[soLuong++] = xe;
-        mangXe = mangTemp ;
+        temp[soLuong++ ] = xe ;
+        mangXe = temp ;
+        xe.xuat();
     }
+
 }
